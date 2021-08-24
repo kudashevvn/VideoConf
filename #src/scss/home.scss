@@ -1,0 +1,245 @@
+// Первый блок, галерея, меню галерерии
+
+.events__wrapper {
+	font-family: "Gilroy" sans-serif;
+	margin: 100px auto;
+}
+.events__choice {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 50px;
+}
+.events__item {
+	display: flex;
+	margin-right: 10px;
+	min-width: 170px;
+	min-height: 60px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.events__link {
+	display: flex;
+	color: #333333;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+	background: url(../img/eventMenuRectangle.svg) top left no-repeat,
+		url(../img/eventMenuRectangle2.svg) 5px 5px / auto auto no-repeat;
+	line-height: 21px;
+}
+.events__link._active {
+	background-color: #333333;
+	background-image: none;
+	color: #ffffff;
+}
+@media (max-width: $md1 + px) {
+	.events__item {
+		min-width: 140px;
+	}
+	.events__link {
+		font-size: 16px;
+		background: url(../img/eventMenuRectangle.svg) top left / 135px 55px no-repeat,
+			url(../img/eventMenuRectangle2.svg) 5px 5px /135px 55px no-repeat;
+	}
+}
+@media (max-width: $maxWidthContainer + px) {
+	.events__item {
+		min-width: 110px;
+		min-height: 40px;
+	}
+	.events__link {
+		font-size: 14px;
+		background: url(../img/eventMenuRectangle.svg) top left / 105px 35px no-repeat,
+			url(../img/eventMenuRectangle2.svg) 5px 5px /105px 35px no-repeat;
+	}
+}
+@media (max-width: $md3 + px) {
+	.events__choice {
+		flex-wrap: wrap;
+	}
+	.events__item {
+		max-width: 110px;
+		max-height: 40px;
+		margin: 10px;
+		&:last-child {
+			margin-right: 10px;
+		}
+	}
+	.events__link {
+		background: url(../img/eventMenuRectangle.svg) top left / 105px 35px no-repeat,
+			url(../img/eventMenuRectangle2.svg) 5px 5px /105px 35px no-repeat;
+	}
+}
+.evets__galery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.events__galery-elem {
+	align-items: center;
+	flex: 0 1 33.333%;
+	position: relative;
+	padding: 0 30px 30px 0;
+	max-width: 350px;
+	@media (max-width: 720px) {
+		margin: 0 auto;
+	}
+}
+.events__galery-img {
+	min-width: 350px;
+	min-height: 280px;
+}
+@media (max-width: 360px) {
+	.events__galery-img {
+		min-width: 280px;
+		min-height: 220px;
+	}
+	.events__galery-elem {
+		padding: 10px;
+	}
+	.events__galery-title {
+		top: 180px;
+	}
+}
+.events__galery-title {
+	text-decoration: none;
+	position: absolute;
+	top: 222px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+// Второй блок: приглашение в салоны
+
+.salons__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 0;
+}
+.salons__text {
+	max-width: 730px;
+	font-family: "Gilroy" sans-serif;
+	font-size: 18px;
+	line-height: 140%;
+	text-align: center;
+	color: #ffffff;
+}
+.salons__btn {
+	font-family: "Gilroy" sans-serif;
+	margin: 50px 0 50px 0;
+	align-items: center;
+	padding: 15px 35px;
+	width: 235px;
+	height: 51px;
+	color: #333333;
+	background: #ffffff;
+	border: 1px solid #333333;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+// Третий блок: статьи
+
+.articles__wrapper {
+	margin: 100px auto;
+	text-align: center;
+}
+.articles__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media (max-width: $md1 + px) {
+		justify-content: space-around;
+	}
+}
+.articles__item {
+	position: relative;
+	min-width: 350px;
+	min-height: 370px;
+	padding: 0;
+
+	@media (max-width: $md1 + px) {
+		justify-content: space-around;
+		padding: 15px 0;
+		min-width: 300px;
+		min-height: 330px;
+	}
+}
+.articles__img {
+	width: 100%;
+	@media (max-width: 360px) {
+		min-width: 300px;
+		min-height: 330px;
+	}
+}
+.articles__link {
+	text-decoration: none;
+	max-width: 204px;
+	position: absolute;
+	top: 248px;
+	left: 73px;
+	text-align: center;
+	font-size: 21px;
+	line-height: 140%;
+	color: #ffffff;
+	@media (max-width: 360px) {
+		left: 48px;
+	}
+}
+.articles__btn {
+	margin-top: 60px;
+}
+
+// Четвертый блок: о нас в соц сетях
+.social__wrapper {
+	margin: 80px auto 130px auto;
+}
+.gallery__items {
+	display: grid;
+	gap: 0;
+	grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+	@media (min-width: $md2 + px) and (max-width: $md1 + px) {
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	}
+}
+.gallery__item {
+	position: relative;
+	padding: 0 0 50% 0;
+}
+.gallery__item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.gallery__item video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.social__video {
+	grid-column: span 2;
+}

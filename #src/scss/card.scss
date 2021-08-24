@@ -1,0 +1,237 @@
+// Меню навигации по разделам сайта
+.nav-page {
+	max-width: 468px;
+	margin: 60px auto 50px auto;
+}
+.nav-page__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media (max-width: $md4 + px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.nav-page__item {
+	margin-right: 10px;
+	@media (max-width: $md4 + px) {
+		margin-top: 5px;
+	}
+}
+.nav-page__link {
+	font-family: "gilroy-regular";
+	font-size: 14px;
+	line-height: 150%;
+	text-decoration-line: underline;
+	color: #333333;
+}
+.nav-page__link._active {
+	text-decoration: none;
+}
+.nav-page__bord {
+	font-size: 18px;
+	color: #333333;
+	line-height: 150%;
+	margin-right: 15px;
+	@media (max-width: $md4 + px) {
+		display: none;
+	}
+}
+
+// Карточка товара
+.card {
+	display: flex;
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+	}
+}
+.card__galery {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	@media (max-width: $md2 + px) {
+		flex-direction: row;
+		justify-content: center;
+	}
+	@media (max-width: 600px) {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+}
+.card__main-pucture {
+	margin: 0 0 30px 0;
+	@media (max-width: $md1 + px) {
+		width: 432px;
+		height: 344px;
+	}
+	@media (min-width: 1141px) {
+		width: 540px;
+		height: 430px;
+	}
+	@media (max-width: 600px) {
+		text-align: center;
+		max-width: 90%;
+	}
+	@media (max-width: $md4 + px) {
+		width: 310px;
+		height: 100%;
+	}
+}
+.card__picture {
+	display: flex;
+	justify-content: space-between;
+	max-height: 120px;
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	@media (max-width: 600px) {
+		flex-direction: row;
+	}
+}
+.card__picture img {
+	@media (min-width: $md1 + pc) {
+		width: 160px;
+		height: 120px;
+	}
+	@media (max-width: $md1 + px) {
+		width: 128px;
+		height: 96px;
+	}
+	@media (max-width: $md2 + px) {
+		margin-left: 15px;
+	}
+	@media (max-width: 600px) {
+		margin: 5px;
+		max-width: 90px;
+		max-height: 68px;
+	}
+}
+.card__info {
+	font-family: "gilroy-regular";
+	color: #333333;
+	font-size: 14px;
+	line-height: 150%;
+	margin: 0 0 0 30px;
+	border: 1px solid #d6d6d6;
+	position: relative;
+	@media (max-width: $md2 + px) {
+		margin: 0 auto;
+	}
+}
+.card__wrapper {
+	margin: 9px 9px 9px 9px;
+	border: 1px solid #d6d6d6;
+}
+.card__wrapper-marg {
+	height: 100%;
+	margin: 40px 29px 40px 29px;
+	@media (max-width: 1141px) {
+		margin: 20px 19px 20px 19px;
+	}
+}
+.card__botom-bord {
+	border-bottom: 1px solid #d6d6d6;
+}
+.card__title {
+	font-family: "gilroy-medium";
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #333333;
+}
+.card__category-good {
+	margin: 30px 0;
+	display: flex;
+	@media (max-width: 1141px) {
+		margin: 10px 0;
+	}
+	@media (max-width: $md4 + px) {
+		flex-direction: column;
+	}
+}
+.card__params {
+	margin-right: 25px;
+	display: flex;
+	color: #979797;
+}
+.card__link {
+	margin-left: 14px;
+	color: #979797;
+}
+.card__description {
+	margin-top: 30px;
+	@media (max-width: 1141px) {
+		margin-top: 10px;
+	}
+}
+.card__price {
+	font-family: "gilroy-medium";
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #333333;
+	margin: 30px 0;
+	@media (max-width: 1141px) {
+		margin: 15px 0;
+	}
+}
+.card__pay {
+	margin-right: 30px;
+	height: 41px;
+	width: 110px;
+	font-family: "gilroy-regular";
+	background-color: #333333;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.card__add-basket {
+	width: 258px;
+	height: 41px;
+	background: #f9f9f9;
+	border: 1px solid #333333;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #333333;
+	margin-top: 10px;
+	@media (max-width: $md4 + px) {
+		width: 240px;
+	}
+}
+
+// Рекомендованные товары
+.recommendations {
+	margin: 120px auto 30px auto;
+}
+.recommendations__goods {
+	display: grid;
+	grid-auto-rows: auto;
+	gap: 0;
+	text-align: center;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-rows: repeat(1, 1fr);
+	font-family: "Gilroy" sans-serif;
+	color: #333333;
+	@media (max-width: 370px) {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+}
+._subtitle-card {
+	@media (max-width: 360px) {
+		max-width: 225px;
+		margin: 0 auto 20px auto;
+	}
+}

@@ -1,0 +1,146 @@
+.catalog {
+	margin: 100px auto 50px auto;
+	@media (max-width: 730px) {
+		max-width: 70%;
+	}
+}
+.catalog__menu {
+	margin: 0 0 60px 0;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 730px) {
+		flex-direction: column;
+	}
+}
+.catalog__title {
+	width: 100%;
+	cursor: pointer;
+	padding: 8px 0;
+	border-bottom: 1px solid #d6d6d6;
+}
+.catalog__menu-polig {
+	position: absolute;
+	right: 0;
+	top: 14px;
+	width: 15px;
+	height: 10px;
+}
+.catalog__menu li {
+	font-size: 16px;
+	position: relative;
+	width: 100%;
+	margin-right: 30px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.catalog__menu-link {
+	width: 100%;
+	color: #333333;
+}
+.catalog__sub-menu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 25px;
+	padding: 20px 0 0 0;
+	@media (max-width: 730px) {
+		position: relative;
+		top: 0;
+		left: 20px;
+	}
+}
+.catalog__sub-menu li {
+	margin-bottom: 8px;
+}
+.catalog__sub-menu-link {
+	color: #333333;
+}
+// Адаптация под тачскрины или мышь
+body.mouse .catalog__menu > li:hover .catalog__menu-polig {
+	transform: rotate(180deg);
+	transition: all 0.7s ease 0.2s;
+}
+body.mouse .catalog__menu > li:hover .catalog__sub-menu {
+	display: block;
+}
+.catalog__menu-polig._active {
+	transform: rotate(180deg);
+	transition: all 0.7s ease 0.2s;
+}
+.catalog__sub-menu._active {
+	display: block;
+}
+// Товары
+.goods {
+	margin: 0 auto;
+	display: grid;
+	grid-auto-rows: auto;
+	gap: 0;
+	text-align: center;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-rows: repeat(2, 1fr);
+	font-family: "Gilroy" sans-serif;
+	color: #333333;
+	@media (max-width: 370px) {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+}
+.goods__picture {
+	margin: 50px 35px 25px 35px;
+	@media (max-width: 370px) {
+		margin: 30px 0 15px 0;
+	}
+}
+.goods__name {
+	font-size: 16px;
+	line-height: 150%;
+}
+.goods__brand {
+	font-family: "gilroy-semibold";
+	margin: 10px 0 15px 0;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 140%;
+}
+.goods__price {
+	font-family: "gilroy-medium";
+	width: 125px;
+	height: 41px;
+	background: #333333;
+	border: 1px solid #ffffff;
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 21px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	margin-bottom: 90px;
+	@media (max-width: 370px) {
+		margin-bottom: 40px;
+	}
+}
+.goods__item {
+	border-bottom: 1px solid #d6d6d6;
+}
+@media (max-width: 719px) {
+	.goods__item:nth-last-of-type(-n + 1) {
+		border: none;
+	}
+}
+@media (min-width: 720px) and (max-width: $md1 + px) {
+	.goods__item:nth-last-of-type(-n + 2) {
+		border: none;
+	}
+}
+@media (min-width: $md1 + px) {
+	.goods__item:nth-last-of-type(-n + 3) {
+		border: none;
+	}
+}
+
+.goods__btn {
+	background: #f9f9f9;
+	font-family: "gilroy-medium";
+	text-align: center;
+}

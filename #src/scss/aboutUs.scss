@@ -1,0 +1,108 @@
+.about {
+	max-width: 922px;
+	margin: 120px auto 80px auto;
+	display: flex;
+	@media (max-width: $md3 + px) {
+		flex-direction: column;
+		align-items: center;
+		margin: 80px auto;
+	}
+}
+.about__title {
+	font-family: "gilroy-semibold";
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 140%;
+	color: #333333;
+	margin-bottom: 20px;
+}
+._no-title {
+	display: none;
+}
+.about__text {
+	overflow: hidden;
+	max-height: 265px;
+}
+.about__text._active {
+	overflow: visible;
+	max-height: 100%;
+}
+.about__read {
+	position: relative;
+	font-size: 16px;
+	line-height: 150%;
+	font-family: "gilroy-regular";
+	color: #333333;
+	max-width: 540px;
+}
+.about_bcgrnd {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	/* FF3.6-15 */
+	background-image: -moz-linear-gradient(top, rgba(249, 249, 249, 0) 0%, #f9f9f9 80%);
+	/* Chrome10-25,Safari5.1-6 */
+	background-image: -webkit-linear-gradient(top, rgba(249, 249, 249, 0) 0%, #f9f9f9 80%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-image: linear-gradient(to bottom, rgba(249, 249, 249, 0) 0%, #f9f9f9 80%);
+}
+.about_bcgrnd._active {
+	display: none;
+}
+.about__wrapper {
+	position: relative;
+}
+.about__btn-read {
+	position: absolute;
+	left: 0;
+	font-family: "gilroy-medium";
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #333333;
+	border-bottom: 1px dashed #333333;
+	@media (max-width: 1040px) {
+		top: 90%;
+	}
+	@media (min-width: 1040px) {
+		top: 80%;
+	}
+}
+.about__btn-read._active {
+	display: none;
+}
+.about__arguments {
+	display: grid;
+	max-height: 270px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	@media (max-width: $md3 + px) {
+		margin-top: 40px;
+	}
+}
+.about__argument {
+	margin: 20px 0 30px 60px;
+	@media (max-width: $md3 + px) {
+		margin: 10px 20px 30px 20px;
+	}
+}
+.about__argument p {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 150%;
+	font-family: "gilroy-regular";
+	color: #000;
+}
+._icon-Group,
+._icon-Group-1,
+._icon-Group-2,
+._icon-Group-3 {
+	text-align: center;
+	font-size: 45px;
+	flex: 0 0 50%;
+	color: #333333;
+}

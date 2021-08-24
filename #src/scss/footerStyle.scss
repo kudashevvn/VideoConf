@@ -1,0 +1,111 @@
+.footer {
+	color: #333333;
+	font-family: "Gilroy" sans-serif;
+}
+.footer__wrapper {
+	display: flex;
+	margin-top: 70px;
+	justify-content: space-between;
+	border-bottom: 1px solid #333333;
+	@media (max-width: $md2 + px) {
+		flex-direction: column;
+		position: relative;
+	}
+}
+.footer__item {
+	position: relative;
+	flex: 0 1 25%;
+	margin: 0 0 50px 0;
+	@media (min-width: $md2 + px) {
+		margin: 0 30px 50px 0;
+		&:last-child {
+			margin: 0 0 60px 0;
+		}
+	}
+}
+.footer__title {
+	width: 100%;
+	text-align: left;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 140%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	border-bottom: 1px solid #333333;
+	margin-bottom: 30px;
+	@media (max-width: $md4 + px) {
+		width: 80%;
+	}
+}
+.footer__menu li {
+	margin-bottom: 15px;
+}
+.footer__menu-link {
+	padding-left: 10px;
+	text-align: left;
+}
+.footer__pay {
+	margin-top: 6px;
+}
+.footer__pay img {
+	width: 45px;
+	margin-right: 10px;
+	height: 30px;
+}
+.footer__social-media {
+	display: flex;
+}
+.footer__social-media a {
+	margin-right: 24px;
+	text-decoration: none;
+	color: #333333;
+	font-size: 20px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.footer__social-media a:hover {
+	color: rgb(129, 129, 129);
+}
+.footer__info {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 10px;
+	margin: 20px auto;
+	@media (max-width: 600px) {
+		flex-direction: column;
+		padding: 20px 0;
+	}
+}
+._footer-text-underline {
+	text-decoration: underline;
+}
+.footer__text {
+	font-size: 14px;
+	line-height: 150%;
+	color: #333333;
+	@media (max-width: 600px) {
+		padding: 20px 0;
+	}
+}
+//для спойлера
+.footer__wrapper._init .footer__title {
+	cursor: pointer;
+}
+.footer__wrapper._init .footer__title::before,
+.footer__wrapper._init .footer__title::after {
+	content: "";
+	width: 23px;
+	height: 2px;
+	background-color: #333333;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	transition: transform 0.5s ease 0s;
+}
+.footer__wrapper._init .footer__title::before {
+	transform: rotate(90deg);
+}
+.footer__wrapper._init .footer__title._active::before {
+	transform: rotate(-180deg);
+}
